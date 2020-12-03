@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<title><b>CGPA CALCULATOR</b></title>
+ 
+<style>
+body{
+	background-color:black;
+	}
+p{
+color:white;}
+footer {
+  text-align: left;
+  color:black;
+  background-color:pink;
+  font-size:20px;
+}
+	
+</style>
+<body>
+<script>
+var v1,v2,v3,v4,v5,v6,v7,v8,t,cgpa,sum;	
+window.addEventListener("load",start,false);
+function start(){
+	document.getElementById("sem1").addEventListener("focus",semone,false);
+	document.getElementById("sem1").addEventListener("blur",one,false);
+	document.getElementById("sem2").addEventListener("focus",semtwo,false);
+	document.getElementById("sem2").addEventListener("blur",two,false);
+	document.getElementById("sem3").addEventListener("focus",semthree,false);
+	document.getElementById("sem3").addEventListener("blur",three,false);
+	document.getElementById("sem4").addEventListener("focus",semfour,false);
+	document.getElementById("sem4").addEventListener("blur",four,false);
+	document.getElementById("sem5").addEventListener("focus",semfive,false);
+	document.getElementById("sem5").addEventListener("blur",five,false);
+	document.getElementById("sem6").addEventListener("focus",semsix,false);
+	document.getElementById("sem6").addEventListener("blur",six,false);
+	document.getElementById("sem7").addEventListener("focus",semseven,false);
+	document.getElementById("sem7").addEventListener("blur",seven,false);
+	document.getElementById("sem8").addEventListener("focus",semeight,false);
+	document.getElementById("sem8").addEventListener("blur",eight,false);
+	document.getElementById("res").addEventListener("focus",calculate_total,false);
+	}
+
+function semone(e){
+	document.getElementById("help1").innerHTML="Enter sem 1 GPA";
+	e.target.style.background = 'pink'; 
+	v1=parseInt(document.getElementById("sem1").value); 
+	
+}
+function one(e){
+	document.getElementById("help1").innerHTML="";
+	e.target.style.background = ''; 
+}
+function semtwo(e){
+	document.getElementById("help2").innerHTML="Enter sem 2 GPA";
+	e.target.style.background = 'pink'; 
+	v2=document.getElementById("sem2").value;
+	v2=parseFloat(v2);
+}
+function two(e){
+	document.getElementById("help2").innerHTML="";
+	e.target.style.background = ''; 
+}
+function semthree(e){
+	document.getElementById("help3").innerHTML="Enter sem 3 GPA";
+	e.target.style.background = 'pink'; 
+	v3=document.getElementById("sem3").value;
+	v3=parseFloat(v3);
+}
+function three(e){
+	document.getElementById("help3").innerHTML="";
+	e.target.style.background = ''; 
+}
+function semfour(e){
+	document.getElementById("help4").innerHTML="Enter sem 4 GPA";
+	e.target.style.background = 'pink'; 
+	v4=document.getElementById("sem4").value;
+	v4=parseFloat(v4);
+}
+function four(e){
+	document.getElementById("help4").innerHTML="";
+	e.target.style.background = ''; 
+}
+function semfive(e){
+	document.getElementById("help5").innerHTML="Enter sem 5 GPA";
+	e.target.style.background = 'pink'; 
+	v5=document.getElementById("sem5").value;
+	v5=parseFloat(v5);
+}
+function five(e){
+	document.getElementById("help5").innerHTML="";
+	e.target.style.background = ''; 
+}
+function semsix(e){
+	document.getElementById("help6").innerHTML="Enter sem 6 GPA";
+	e.target.style.background = 'pink'; 
+	v6=document.getElementById("sem6").value;
+	v6=parseFloat(v6);
+}
+function six(e){
+	document.getElementById("help6").innerHTML="";
+	e.target.style.background = ''; 
+}
+function semseven(e){
+	document.getElementById("help7").innerHTML="Enter sem 7 GPA";
+	e.target.style.background = 'pink'; 
+	v7=document.getElementById("sem7").value;
+	v7=parseFloat(v7);
+}
+function seven(e){
+	document.getElementById("help7").innerHTML="";
+	e.target.style.background = ''; 
+}
+function semeight(e){
+	document.getElementById("help8").innerHTML="Enter sem 8 GPA";
+	e.target.style.background = 'pink'; 
+	v8=document.getElementById("sem8").value;
+	v8=parseFloat(v8);
+}
+function eight(e){
+	document.getElementById("help8").innerHTML="";
+	e.target.style.background = ''; 
+}
+
+function calculate_total(){
+	v1=parseFloat(document.getElementById("sem1").value);
+	v2=parseFloat(document.getElementById("sem2").value);
+	v3=parseFloat(document.getElementById("sem3").value);
+	v4=parseFloat(document.getElementById("sem4").value);
+	v5=parseFloat(document.getElementById("sem5").value);
+	v6=parseFloat(document.getElementById("sem6").value);
+	v7=parseFloat(document.getElementById("sem7").value);
+	v8=parseFloat(document.getElementById("sem8").value);
+	cgpa=v1+v2+v3+v4+v5+v6+v7+v8;
+	document.getElementById("result").innerHTML="CGPA : "+cgpa/8;
+}
+
+</script>
+<div class="heading">
+<h1 style="color:white"><center>CGPA CALCULATOR</center><h1>
+<br><h3 style="color:white">ENTER THE 8 SEMESTER MARKS</h3>
+</div>
+<form>
+<label style="color:white;font-size:20px">SEM 1</label>
+<input type="text" id="sem1" name="sem1"><p id="help1"></p>
+<hr>
+<label style="color:white;font-size:20px">SEM 2</label>
+<input type="number" id="sem2" name="sem2"><p id="help2"></p>
+<hr>
+<label style="color:white;font-size:20px">SEM 3</label>
+<input type="number" id="sem3" name="sem3"><p id="help3"></p> 
+<hr>
+<label style="color:white;font-size:20px">SEM 4</label>
+<input type="number" id="sem4" name="sem4"><p id="help4"></p> 
+<hr>
+<label style="color:white;font-size:20px">SEM 5</label>
+<input type="number" id="sem5" name="sem5"><p id="help5"></p> 
+<hr>
+<label style="color:white;font-size:20px">SEM 6</label>
+<input type="number" id="sem6" name="sem6"><p id="help6"></p> 
+<hr>
+<label style="color:white;font-size:20px">SEM 7</label>
+<input type="number" id="sem7" name="sem7"><p id="help7"></p> 
+<hr>
+<label style="color:white;font-size:20px">SEM 8</label>
+<input type="number" id="sem8" name="sem8"><p id="help8"></p> 
+<hr>
+<input type="button" id="res" value="calculate" style="color:black;background-color:pink" >
+<p id="result"></p>
+
+</form>
+
+</body>
+
+<footer>
+  <h4>Designed by HARSHINI </h4>
+</footer>
+
+
+</html>
